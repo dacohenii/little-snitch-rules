@@ -1,0 +1,134 @@
+{
+  "name": "Hotspot Saver",
+  "description": "Blocks background updaters, sync and telemetry. Enable only in the Hotspot profile.",
+  "rules": [
+    {
+      "action": "deny",
+      "priority": "high",
+      "remote": "any",
+      "process": "identifier.EQHXZ8M8AV/com.google.GoogleUpdater",
+      "notes": "Google Updater (Chrome)"
+    },
+    {
+      "action": "deny",
+      "priority": "high",
+      "remote": "any",
+      "process": "identifier.EQHXZ8M8AV/com.google.Keystone.Agent",
+      "notes": "Google Keystone agent"
+    },
+    {
+      "action": "deny",
+      "priority": "high",
+      "remote": "any",
+      "process": "identifier.EQHXZ8M8AV/com.google.Keystone",
+      "notes": "Google Keystone"
+    },
+    {
+      "action": "deny",
+      "priority": "high",
+      "remote": "any",
+      "process": "identifier.KL8N8XSYF4/com.brave.BraveUpdater",
+      "notes": "Brave updater"
+    },
+    {
+      "action": "deny",
+      "priority": "high",
+      "remote": "any",
+      "process": "/Applications/zoom.us.app/Contents/Library/LaunchAgents/ZoomUpdater.app/Contents/MacOS/ZoomUpdater",
+      "notes": "Zoom updater"
+    },
+    {
+      "action": "deny",
+      "priority": "high",
+      "remote": "any",
+      "process": "/System/Library/PrivateFrameworks/MobileSoftwareUpdate.framework/Support/softwareupdated",
+      "notes": "macOS updates"
+    },
+    {
+      "action": "deny",
+      "priority": "high",
+      "remote": "any",
+      "process": "/usr/libexec/mobileassetd",
+      "notes": "Apple asset downloads (fonts, voices, ML models, update payloads)"
+    },
+    {
+      "action": "deny",
+      "priority": "high",
+      "remote": "any",
+      "process": "/System/Library/PrivateFrameworks/AppStoreDaemon.framework/Support/appstored",
+      "notes": "App Store auto-updates"
+    },
+    {
+      "action": "deny",
+      "priority": "high",
+      "remote": "any",
+      "process": "/System/Library/PrivateFrameworks/AppStoreDaemon.framework/Support/appstoreagent",
+      "notes": "App Store agent"
+    },
+    {
+      "action": "deny",
+      "priority": "high",
+      "remote": "any",
+      "process": "/System/Library/PrivateFrameworks/CloudPhotoLibrary.framework/Versions/A/Support/cloudphotod",
+      "notes": "iCloud Photos sync"
+    },
+    {
+      "action": "deny",
+      "priority": "high",
+      "remote": "any",
+      "process": "/System/Library/PrivateFrameworks/PhotoAnalysis.framework/Versions/A/Support/photoanalysisd",
+      "notes": "Photos analysis"
+    },
+    {
+      "action": "deny",
+      "priority": "high",
+      "remote": "any",
+      "process": "/System/Library/PrivateFrameworks/MediaAnalysis.framework/Versions/A/mediaanalysisd",
+      "notes": "Media analysis"
+    },
+    {
+      "action": "deny",
+      "priority": "high",
+      "remote": "any",
+      "process": "/System/Library/CoreServices/TimeMachine/backupd",
+      "notes": "Time Machine network backups"
+    },
+    {
+      "action": "deny",
+      "priority": "high",
+      "remote": "any",
+      "process": "/System/Library/CoreServices/SubmitDiagInfo",
+      "notes": "Diagnostics upload"
+    },
+    {
+      "action": "deny",
+      "priority": "high",
+      "remote": "any",
+      "process": "/System/Library/CoreServices/osanalyticshelper",
+      "notes": "Analytics"
+    },
+    {
+      "action": "deny",
+      "priority": "high",
+      "remote": "any",
+      "process": "/usr/libexec/spotlightknowledged.updater",
+      "notes": "Spotlight knowledge updates"
+    },
+    {
+      "action": "deny",
+      "priority": "high",
+      "remote": "any",
+      "process": "/System/Library/PrivateFrameworks/iCloudDriveCore.framework/Versions/A/Support/bird",
+      "disabled": true,
+      "notes": "OPTIONAL: iCloud Drive sync. Enable if you can wait to sync"
+    },
+    {
+      "action": "deny",
+      "priority": "high",
+      "remote": "any",
+      "process": "/System/Library/PrivateFrameworks/CloudKitDaemon.framework/Support/cloudd",
+      "disabled": true,
+      "notes": "OPTIONAL: CloudKit. Aggressive, breaks Notes/Passwords/app sync"
+    }
+  ]
+}
